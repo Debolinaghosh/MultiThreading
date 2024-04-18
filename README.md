@@ -1,4 +1,4 @@
-# MultiThreading (Debolina Ghosh 102103365)
+# MultiThreading Assignment (Debolina Ghosh 102103365)
 This Python script demonstrates matrix multiplication with multithreading. It calculates the product of 100 random matrices of size 1000x1000 with a constant matrix of the same size using multiple threads. It also measures the time taken and CPU usage for different numbers of threads.
 
 ## Prerequisites
