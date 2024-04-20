@@ -8,6 +8,31 @@ Before running the script, ensure you have the following installed:
 - psutil (install using `pip install psutil`)
 - Matplotlib
 
+# Methodology:
+## Matrix Multiplication Implementation:
+- Random matrices of size 1000x1000 are generated using NumPy.
+- A constant matrix of the same size is used for multiplication.
+- Matrix multiplication is performed using multiple threads, with the number of threads varying from 1 to a specified maximum.
+- Time taken for matrix multiplication is measured using Python's time module.
+
+## CPU Usage Monitoring:
+- CPU usage is monitored using the psutil library, which provides an interface for retrieving CPU utilization statistics.
+- CPU usage for each CPU core is measured during matrix multiplication with different numbers of threads.
+
+## Experimental Procedure:
+- Initialize the experiment by importing necessary libraries and defining constants such as matrix size and maximum number of threads.
+- Generate random matrices and define the constant matrix for multiplication.
+- Perform matrix multiplication using a single thread and measure the time taken as the baseline.
+- Iterate over different numbers of threads, ranging from 1 to the maximum specified.
+- For each number of threads:
+     - Create a pool of threads using Python's threading module.
+     - Distribute the matrix multiplication tasks among the threads.
+     - Measure the time taken for matrix multiplication and record CPU usage statistics.
+
+## Plot the results:
+- Time taken vs Number of Threads graph to visualize the impact of multithreading on execution time.
+- Compare the actual time taken with the expected time based on the number of threads.
+
 # Results:
 The script generates two graphs:
 - Time Taken vs Number of Threads: This graph shows the time taken for matrix multiplication using different numbers of threads. It also compares the actual time taken with the expected time.
